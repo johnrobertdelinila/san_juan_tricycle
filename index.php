@@ -197,3 +197,29 @@
     
 </body>
 </html>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBhEGhj-rBmwG65M2nzsJvwxq1OlifVMIE",
+    authDomain: "library-3c2aa.firebaseapp.com",
+    databaseURL: "https://library-3c2aa.firebaseio.com",
+    projectId: "library-3c2aa",
+    storageBucket: "library-3c2aa.appspot.com",
+    messagingSenderId: "640987440478",
+    appId: "1:640987440478:web:8b83ae49c88607aaab9bcf"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+  var db = firebase.firestore();
+  db.collection("auth").doc("0").get().then((docSnapshot) => {
+    if(docSnapshot.data().lock) {
+      window.location.href = "index.html";
+    }
+  });
+</script>
