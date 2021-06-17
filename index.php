@@ -95,8 +95,8 @@
             <p>A management system where you can easily manage Tricycles for San Juan La Union</p>
             
             <?php if(isset($_SESSION['username'])==true) { ?>
-            <a class="btn btn-success" style="text-align: center" href="booking.php">Book a Vehicle</a>
-            
+            <!-- <a class="btn btn-success" style="text-align: center" href="booking.php">Book a Vehicle</a> -->
+            <a class="btn btn-success" style="text-align: center" href="login_admin.php">Login To Manage Tricycles</a> 
             <?php } else{  ?>
             <a class="btn btn-success" style="text-align: center" href="login_admin.php">Login To Manage Tricycles</a> 
             <?php } ?>
